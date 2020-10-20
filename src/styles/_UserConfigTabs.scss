@@ -1,0 +1,49 @@
+.user-config-tabs {
+  flex: 1;
+  background-color: var(--light-bg);
+  border-radius: var(--borders);
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__nav {
+    display: flex;
+    text-transform: capitalize;
+
+    & a {
+      flex: 1;
+      text-align: center;
+      display: block;
+      padding: var(--vertical-r);
+      border: none;
+      background-color: var(--dark-bg);
+
+      &.active {
+        background-color: var(--light-bg);
+        cursor: default;
+      }
+
+      &:hover {
+        opacity: 1;
+        background-color: var(--light-bg);
+      }
+    }
+  }
+
+  &__form {
+    margin: calc(4 * var(--vertical-r));
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+
+    @media (max-width: 600px) {
+      margin-right: calc(2 * var(--vertical-r));
+      margin-left: calc(2 * var(--vertical-r));
+    }
+
+    & h4 {
+      margin: var(--vertical-r) 0;
+      cursor: default;
+    }
+  }
+}

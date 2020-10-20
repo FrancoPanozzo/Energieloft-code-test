@@ -1,0 +1,30 @@
+.header__logo {
+  border-bottom: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--brand-dark);
+  font-family: 'Heebo', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__G {
+    color: var(--brand-light);
+  }
+
+  &__loft {
+    border: 2px solid;
+    font-size: 0.5em;
+    padding: 0 0.15em;
+    margin-left: 0.25em;
+    margin-bottom: 0.15em;
+    font-weight: 600;
+  }
+}

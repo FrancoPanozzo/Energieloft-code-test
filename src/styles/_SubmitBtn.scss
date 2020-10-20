@@ -1,0 +1,17 @@
+.user-config-tabs__form__submit-btn {
+  margin-top: auto;
+  align-self: flex-end;
+  padding: var(--vertical-r);
+  border-radius: var(--borders);
+  border: none;
+  background-color: var(--dark-bg);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--dark-text);
+    color: var(--light-text);
+  }
+  &:active {
+    background-color: var(--dark-bg);
+  }
+}

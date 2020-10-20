@@ -1,0 +1,109 @@
+.user-config-tabs__form__form-control {
+  padding: calc(2 * var(--vertical-r)) calc(4 * var(--vertical-r));
+  margin-bottom: calc(2 * var(--vertical-r));
+  display: flex;
+  align-items: center;
+
+  &:last-of-type {
+    margin-bottom: calc(4 * var(--vertical-r));
+  }
+
+  &:hover {
+    background-color: var(--medium-bg);
+  }
+
+  &.editing {
+    background-color: var(--dark-bg);
+  }
+
+  &:hover &__btn,
+  &.editing &__btn {
+    visibility: visible;
+  }
+
+  @media (max-width: 600px) {
+    padding: var(--vertical-r) calc(2 * var(--vertical-r));
+  }
+
+  @media (max-width: 768px) {
+    background-color: var(--medium-bg);
+  }
+
+  &__input,
+  & span,
+  &__select {
+    margin: 0;
+    margin-right: var(--vertical-r);
+    border: 0;
+    border-bottom: 1px solid transparent;
+    border-radius: var(--borders);
+    padding: var(--vertical-r);
+    width: 45%;
+  }
+
+  &__input {
+    border-bottom: 1px solid;
+  }
+
+  & span {
+    padding: 0;
+    margin: 0;
+  }
+
+  & .wrong-input {
+    border-bottom-color: red;
+  }
+  & .danger-feedback {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 0.2em;
+  }
+
+  &__btn {
+    border: none;
+    align-self: flex-end;
+    visibility: hidden;
+    margin-left: auto;
+    padding: var(--vertical-r);
+    background-color: var(--dark-bg);
+    border-radius: var(--borders);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s ease;
+
+    &:hover,
+    &.editing {
+      background-color: var(--dark-text);
+      color: var(--light-text);
+    }
+
+    @media (max-width: 768px) {
+      visibility: visible;
+    }
+  }
+
+  & .multiLineInputContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 45%;
+    margin: 0;
+    & * {
+      width: 100%;
+    }
+    & label {
+      margin-top: calc(2 * var(--vertical-r));
+      margin-bottom: var(--vertical-r);
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    & ul {
+      list-style-type: square;
+      margin: 0;
+      margin-top: var(--vertical-r);
+      padding: 0;
+      padding-left: calc(2 * var(--vertical-r));
+    }
+  }
+}

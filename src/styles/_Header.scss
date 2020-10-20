@@ -1,0 +1,63 @@
+@import 'HeaderLogo';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--gradient);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  color: var(--light-text);
+  font-size: 1rem;
+  height: 70px;
+  box-shadow: var(--shadow);
+
+  @media (max-width: 600px) {
+    flex-flow: column nowrap;
+    padding: calc(2 * var(--vertical-r)) 0;
+    background: var(--gradient-sm-screen);
+  }
+}
+
+.header__notifications {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__item {
+    margin-left: 2rem;
+    position: relative;
+    height: 1.1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:first-child {
+      margin-left: 0;
+      display: flex;
+
+      span {
+        align-self: center;
+        display: inline-block;
+        margin-left: 0.25rem;
+        font-size: 0.85em;
+      }
+    }
+  }
+}
+
+.alert-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -4px;
+  display: block;
+  background-color: var(--brand-light);
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+  border: 1px solid var(--light-text);
+}
